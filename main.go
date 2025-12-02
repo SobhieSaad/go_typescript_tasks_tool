@@ -136,6 +136,10 @@ func updateTodo(c *fiber.Ctx) error {
 	_, err = collection.UpdateOne(context.Background(), filter, update)
 
 	if err != nil {
+		return c.Status(400).JSON(fiber.Map({"error": "invalid ID"}))
+	}
+
+	if err != nil {
 		return err
 	}
 
