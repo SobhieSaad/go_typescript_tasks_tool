@@ -24,10 +24,13 @@ type Todo struct {
 var collection *mongo.Collection
 
 func main() {
-	err := godotenv.Load("env")
 
-	if err != nil {
-		log.Fatal("Error loading .env file")
+	if os.Getenv("ENV") != "production" {
+		err := godotenv.Load("env")
+
+		if err != nil {
+			log.Fatal("Error loading .env file")
+		}
 	}
 
 	MONGO_DB_URI := os.Getenv("MONGO_DB_URI")
