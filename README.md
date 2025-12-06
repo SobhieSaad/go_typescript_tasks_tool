@@ -18,6 +18,6 @@ and Air for hot reload:
 
 ## Project demo image
 
-<img src="./public/demo.png">
+<img src="https://github.com/SobhieSaad/go_typescript_tasks_tool/blob/main/client/public/demo.png">
 
 -------
